@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UASU - University of Embu Chapter | Academic Excellence & Staff Welfare</title>
+    <link rel="icon" type="image/jpeg" href="assets/logo.jpg">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
@@ -44,144 +45,141 @@
     </script>
    <style>
     body {
-        background-color: #87CEFA; /* Sky Blue primary page background */
+        background-color: #87CEFA;
     }
-    /* Sky Blue Hero Gradient */
     .sky-hero-gradient {
         background: linear-gradient(135deg, #A0D8EF 0%, #87CEFA 50%, #70BBE8 100%);
     }
 
-   /* ===== HERO SLIDER STYLES ===== */
-.hero-slider {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 16 / 9;           /* Matches your cropped 1200×675 images */
-    max-height: 85vh;               /* Won't get too tall on ultrawide screens */
-    overflow: hidden;
-    border-bottom: 4px solid #0F2C59;
-    background-color: #081935;
-}
-
-.slide {
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    transition: opacity 1.2s ease-in-out;
-    display: flex;
-    align-items: center;
-}
-
-.slide.active {
-    opacity: 1;
-    z-index: 1;
-}
-
-.slide-img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;              /* Fills perfectly — ratio matches now */
-    object-position: center;
-    z-index: 2;
-}
-
-.slide-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(135deg, rgba(15, 44, 89, 0.65) 0%, rgba(8, 25, 53, 0.45) 100%);
-    z-index: 3;
-}
-
-.slide-content {
-    position: relative;
-    z-index: 4;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    width: 100%;
-    color: white;
-}
-
-.slide-content h1 {
-    font-family: 'Merriweather', serif;
-    font-size: 2.5rem;
-    font-weight: 800;
-    line-height: 1.2;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-}
-
-.slide-content p {
-    font-size: 1.1rem;
-    font-weight: 500;
-    max-width: 42rem;
-    margin-bottom: 1.5rem;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-}
-
-@media (max-width: 768px) {
+    /* ===== HERO SLIDER STYLES ===== */
     .hero-slider {
-        aspect-ratio: 4 / 3;        /* Taller ratio on mobile */
-        max-height: 70vh;
+        position: relative;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        max-height: 85vh;
+        overflow: hidden;
+        border-bottom: 4px solid #0F2C59;
+        background-color: #081935;
     }
-    .slide-content h1 { font-size: 1.75rem; }
-    .slide-content p { font-size: 0.95rem; }
-}
 
-/* Slider dot navigation */
-.slider-dots {
-    position: absolute;
-    bottom: 25px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10;
-    display: flex;
-    gap: 12px;
-}
-.slider-dot {
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border: 2px solid rgba(255, 255, 255, 0.8);
-}
-.slider-dot.active {
-    background: #D4AF37;
-    border-color: #D4AF37;
-    transform: scale(1.25);
-}
-.slider-dot:hover {
-    background: rgba(255, 255, 255, 0.9);
-}
+    .slide {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transition: opacity 1.2s ease-in-out;
+        display: flex;
+        align-items: center;
+    }
 
-/* Slider navigation arrows */
-.slider-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    background: rgba(15, 44, 89, 0.6);
-    color: white;
-    border: 2px solid rgba(255, 255, 255, 0.4);
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 1.1rem;
-}
-.slider-arrow:hover {
-    background: #0F2C59;
-    border-color: #D4AF37;
-}
-.slider-arrow.prev { left: 20px; }
-.slider-arrow.next { right: 20px; }
+    .slide.active {
+        opacity: 1;
+        z-index: 1;
+    }
+
+    .slide-img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        z-index: 2;
+    }
+
+    .slide-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(15, 44, 89, 0.65) 0%, rgba(8, 25, 53, 0.45) 100%);
+        z-index: 3;
+    }
+
+    .slide-content {
+        position: relative;
+        z-index: 4;
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        width: 100%;
+        color: white;
+    }
+
+    .slide-content h1 {
+        font-family: 'Merriweather', serif;
+        font-size: 2.5rem;
+        font-weight: 800;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    }
+
+    .slide-content p {
+        font-size: 1.1rem;
+        font-weight: 500;
+        max-width: 42rem;
+        margin-bottom: 1.5rem;
+        text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    @media (max-width: 768px) {
+        .hero-slider {
+            aspect-ratio: 4 / 3;
+            max-height: 70vh;
+        }
+        .slide-content h1 { font-size: 1.75rem; }
+        .slide-content p { font-size: 0.95rem; }
+    }
+
+    .slider-dots {
+        position: absolute;
+        bottom: 25px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        display: flex;
+        gap: 12px;
+    }
+    .slider-dot {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border: 2px solid rgba(255, 255, 255, 0.8);
+    }
+    .slider-dot.active {
+        background: #D4AF37;
+        border-color: #D4AF37;
+        transform: scale(1.25);
+    }
+    .slider-dot:hover {
+        background: rgba(255, 255, 255, 0.9);
+    }
+
+    .slider-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+        background: rgba(15, 44, 89, 0.6);
+        color: white;
+        border: 2px solid rgba(255, 255, 255, 0.4);
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 1.1rem;
+    }
+    .slider-arrow:hover {
+        background: #0F2C59;
+        border-color: #D4AF37;
+    }
+    .slider-arrow.prev { left: 20px; }
+    .slider-arrow.next { right: 20px; }
 </style>
 </head>
 <body class="bg-uasu-skyblue text-slate-900 font-sans flex flex-col min-h-screen">
@@ -194,7 +192,7 @@
                 <span class="hidden md:inline"><i class="fa-solid fa-envelope text-uasu-gold mr-1.5"></i> uasu@embuni.ac.ke</span>
             </div>
             <div class="flex items-center space-x-3 text-xs">
-                <span class="bg-uasu-green text-white px-2.5 py-0.5 rounded font-bold shadow-sm border border-emerald-400/30">Active CBA 2021-2025</span>
+                <span class="bg-uasu-green text-white px-2.5 py-0.5 rounded font-bold shadow-sm border border-emerald-400/30">Anticipated CBA 2025-2029</span>
                 <button onclick="openModal('deployModal')" class="text-uasu-gold hover:underline font-bold flex items-center bg-white/10 px-2 py-0.5 rounded">
                     <i class="fa-solid fa-cloud-arrow-up mr-1"></i> Union Achievements
                 </button>
@@ -208,9 +206,9 @@
             <div class="flex justify-between items-center h-20">
                 <!-- Logo & Brand Name -->
                 <a href="#home" class="flex items-center space-x-3 group">
-                    <div class="w-12 h-12 rounded-full bg-uasu-navy flex items-center justify-center text-uasu-gold font-black text-xl border-2 border-uasu-gold shadow-md group-hover:scale-105 transition-transform">
-                        UASU
-                    </div>
+                    <img src="assets/logo.jpg"
+                         alt="UASU UoEm Chapter Logo"
+                         class="w-14 h-14 object-contain rounded-full bg-white p-0.5 border-2 border-uasu-gold shadow-md group-hover:scale-105 transition-transform">
                     <div>
                         <span class="block text-xl font-extrabold text-uasu-navy tracking-tight leading-tight">UASU UoEm</span>
                         <span class="block text-xs font-bold text-uasu-green tracking-wider uppercase">University of Embu Chapter</span>
@@ -258,117 +256,116 @@
     </header>
 
     <main class="flex-grow">
-    <!-- ===== HERO SLIDER SECTION (Replaces static hero) ===== -->
-<section id="home" class="relative">
+    <!-- ===== HERO SLIDER SECTION ===== -->
+    <section id="home" class="relative">
 
-    <!-- Rotating Image Slider -->
-    <div class="hero-slider" id="heroSlider">
+        <div class="hero-slider" id="heroSlider">
 
-        <!-- Slide 1 -->
-        <div class="slide active">
-            <img src="assets/slide1.jpg" alt="Slide 1" class="slide-img">
-            <div class="slide-overlay"></div>
-            <div class="slide-content">
-                <span class="inline-block px-3.5 py-1.5 bg-uasu-gold text-uasu-navy rounded-full text-xs sm:text-sm font-black mb-5 tracking-wide uppercase shadow-md">
-                    <i class="fa-solid fa-shield-halved mr-1.5"></i> Solidarity & Academic Dignity
-                </span>
-                <h1>Advancing Academic Freedom, Staff Welfare & Excellence</h1>
-                <p>Uniting teaching and academic staff across the University of Embu to defend workplace rights and preserve scholarly integrity.</p>
-                <a href="#register" onclick="switchPortalTab('register')" class="inline-flex items-center px-6 py-3 bg-uasu-green text-white font-black rounded-xl shadow-lg hover:bg-uasu-lightgreen transition-all transform hover:-translate-y-0.5">
-                    <i class="fa-solid fa-file-signature mr-2.5"></i> Become a Member
-                </a>
+            <!-- Slide 1 -->
+            <div class="slide active">
+                <img src="assets/slide1.jpg" alt="Slide 1" class="slide-img">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <span class="inline-block px-3.5 py-1.5 bg-uasu-gold text-uasu-navy rounded-full text-xs sm:text-sm font-black mb-5 tracking-wide uppercase shadow-md">
+                        <i class="fa-solid fa-shield-halved mr-1.5"></i> Solidarity & Academic Dignity
+                    </span>
+                    <h1>Advancing Academic Freedom, Staff Welfare & Excellence</h1>
+                    <p>Uniting teaching and academic staff across the University of Embu to defend workplace rights and preserve scholarly integrity.</p>
+                    <a href="#register" onclick="switchPortalTab('register')" class="inline-flex items-center px-6 py-3 bg-uasu-green text-white font-black rounded-xl shadow-lg hover:bg-uasu-lightgreen transition-all transform hover:-translate-y-0.5">
+                        <i class="fa-solid fa-file-signature mr-2.5"></i> Become a Member
+                    </a>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide">
+                <img src="assets/slide2.jpg" alt="Slide 2" class="slide-img">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <span class="inline-block px-3.5 py-1.5 bg-uasu-gold text-uasu-navy rounded-full text-xs sm:text-sm font-black mb-5 tracking-wide uppercase shadow-md">
+                        <i class="fa-solid fa-file-contract mr-1.5"></i> CBA 2025-2029
+                    </span>
+                    <h1>Fair Compensation & Equitable Terms of Service</h1>
+                    <p>We continue to engage stakeholders on the outstanding CBA issues to ensure our members receive what they rightfully deserve.</p>
+                    <a href="#resources" class="inline-flex items-center px-6 py-3 bg-white text-uasu-navy font-extrabold rounded-xl border-2 border-uasu-navy hover:bg-uasu-navy hover:text-white shadow-md transition-all">
+                        <i class="fa-solid fa-file-pdf mr-2.5 text-red-600"></i> Read Latest CBA
+                    </a>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide">
+                <img src="assets/slide3.jpg" alt="Slide 3" class="slide-img">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <span class="inline-block px-3.5 py-1.5 bg-uasu-gold text-uasu-navy rounded-full text-xs sm:text-sm font-black mb-5 tracking-wide uppercase shadow-md">
+                        <i class="fa-solid fa-handshake mr-1.5"></i> Chapter Governance
+                    </span>
+                    <h1>Elected Leaders Serving With Dedication</h1>
+                    <p>Meet the UASU officials working tirelessly to represent academic staff interests at the University of Embu.</p>
+                    <a href="#leadership" class="inline-flex items-center px-6 py-3 bg-uasu-navy text-white font-extrabold rounded-xl shadow-lg hover:bg-uasu-darknavy transition-all border-2 border-uasu-gold">
+                        <i class="fa-solid fa-users mr-2.5 text-uasu-gold"></i> Meet Leadership
+                    </a>
+                </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="slide">
+                <img src="assets/slide4.jpg" alt="Slide 4" class="slide-img">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <span class="inline-block px-3.5 py-1.5 bg-uasu-gold text-uasu-navy rounded-full text-xs sm:text-sm font-black mb-5 tracking-wide uppercase shadow-md">
+                        <i class="fa-solid fa-heart-pulse mr-1.5"></i> Welfare Priority
+                    </span>
+                    <h1>Industrial Action Launch</h1>
+                    <p>UASU Embu Chapter during the launch of Lecturers' strike</p>
+                    <a href="#calculator" onclick="switchPortalTab('calculator')" class="inline-flex items-center px-6 py-3 bg-uasu-green text-white font-extrabold rounded-xl shadow-lg hover:bg-uasu-lightgreen transition-all">
+                        <i class="fa-solid fa-calculator mr-2.5"></i> Pay Estimator
+                    </a>
+                </div>
+            </div>
+
+            <!-- Navigation Arrows -->
+            <button class="slider-arrow prev" onclick="changeSlide(-1)" aria-label="Previous slide">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="slider-arrow next" onclick="changeSlide(1)" aria-label="Next slide">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+            <!-- Dot Navigation -->
+            <div class="slider-dots" id="sliderDots">
+                <span class="slider-dot active" onclick="goToSlide(0)"></span>
+                <span class="slider-dot" onclick="goToSlide(1)"></span>
+                <span class="slider-dot" onclick="goToSlide(2)"></span>
+                <span class="slider-dot" onclick="goToSlide(3)"></span>
             </div>
         </div>
+    </section>
 
-        <!-- Slide 2 -->
-        <div class="slide">
-            <img src="assets/slide2.jpg" alt="Slide 2" class="slide-img">
-            <div class="slide-overlay"></div>
-            <div class="slide-content">
-                <span class="inline-block px-3.5 py-1.5 bg-uasu-gold text-uasu-navy rounded-full text-xs sm:text-sm font-black mb-5 tracking-wide uppercase shadow-md">
-                    <i class="fa-solid fa-file-contract mr-1.5"></i> CBA 2025-2029
-                </span>
-                <h1>Fair Compensation & Equitable Terms of Service</h1>
-                <p>We continue to engage stakeholders on the outstanding CBA issues to ensure our members receive what they rightfully deserve.</p>
-                <a href="#resources" class="inline-flex items-center px-6 py-3 bg-white text-uasu-navy font-extrabold rounded-xl border-2 border-uasu-navy hover:bg-uasu-navy hover:text-white shadow-md transition-all">
-                    <i class="fa-solid fa-file-pdf mr-2.5 text-red-600"></i> Read Latest CBA
-                </a>
-            </div>
-        </div>
-
-        <!-- Slide 3 -->
-        <div class="slide">
-            <img src="assets/slide3.jpg" alt="Slide 3" class="slide-img">
-            <div class="slide-overlay"></div>
-            <div class="slide-content">
-                <span class="inline-block px-3.5 py-1.5 bg-uasu-gold text-uasu-navy rounded-full text-xs sm:text-sm font-black mb-5 tracking-wide uppercase shadow-md">
-                    <i class="fa-solid fa-handshake mr-1.5"></i> Chapter Governance
-                </span>
-                <h1>Elected Leaders Serving With Dedication</h1>
-                <p>Meet the UASU officials working tirelessly to represent academic staff interests at the University of Embu.</p>
-                <a href="#leadership" class="inline-flex items-center px-6 py-3 bg-uasu-navy text-white font-extrabold rounded-xl shadow-lg hover:bg-uasu-darknavy transition-all border-2 border-uasu-gold">
-                    <i class="fa-solid fa-users mr-2.5 text-uasu-gold"></i> Meet Leadership
-                </a>
-            </div>
-        </div>
-
-        <!-- Slide 4 -->
-        <div class="slide">
-            <img src="assets/slide4.jpg" alt="Slide 4" class="slide-img">
-            <div class="slide-overlay"></div>
-            <div class="slide-content">
-                <span class="inline-block px-3.5 py-1.5 bg-uasu-gold text-uasu-navy rounded-full text-xs sm:text-sm font-black mb-5 tracking-wide uppercase shadow-md">
-                    <i class="fa-solid fa-heart-pulse mr-1.5"></i> Welfare Priority
-                </span>
-                <h1>Industrial Action Launch</h1>
-                <p>UASU Embu Chapter during the launch of Lecturers' strike</p>
-                <a href="#calculator" onclick="switchPortalTab('calculator')" class="inline-flex items-center px-6 py-3 bg-uasu-green text-white font-extrabold rounded-xl shadow-lg hover:bg-uasu-lightgreen transition-all">
-                    <i class="fa-solid fa-calculator mr-2.5"></i> Pay Estimator
-                </a>
-            </div>
-        </div>
-
-        <!-- Navigation Arrows -->
-        <button class="slider-arrow prev" onclick="changeSlide(-1)" aria-label="Previous slide">
-            <i class="fa-solid fa-chevron-left"></i>
-        </button>
-        <button class="slider-arrow next" onclick="changeSlide(1)" aria-label="Next slide">
-            <i class="fa-solid fa-chevron-right"></i>
-        </button>
-
-        <!-- Dot Navigation -->
-        <div class="slider-dots" id="sliderDots">
-            <span class="slider-dot active" onclick="goToSlide(0)"></span>
-            <span class="slider-dot" onclick="goToSlide(1)"></span>
-            <span class="slider-dot" onclick="goToSlide(2)"></span>
-            <span class="slider-dot" onclick="goToSlide(3)"></span>
-        </div>
-    </div>
-</section>
-            <!-- Hero Stats Cards (kept below the slider) -->
-            <div class="sky-hero-gradient py-10 border-b-4 border-uasu-navy shadow-xl">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        <div class="bg-white/90 p-4 rounded-xl border-2 border-sky-300 shadow-md">
-                            <span class="block text-2xl sm:text-3xl font-black text-uasu-navy">140+</span>
-                            <span class="text-xs sm:text-sm text-slate-800 font-bold">Academic Staff Members</span>
-                        </div>
-                        <div class="bg-white/90 p-4 rounded-xl border-2 border-sky-300 shadow-md">
-                            <span class="block text-2xl sm:text-3xl font-black text-uasu-green">100%</span>
-                            <span class="text-xs sm:text-sm text-slate-800 font-bold">CBA Compliance Pursuit</span>
-                        </div>
-                        <div class="bg-white/90 p-4 rounded-xl border-2 border-sky-300 shadow-md">
-                            <span class="block text-2xl sm:text-3xl font-black text-uasu-navy">24/7</span>
-                            <span class="text-xs sm:text-sm text-slate-800 font-bold">Grievance Support Desk</span>
-                        </div>
-                        <div class="bg-white/90 p-4 rounded-xl border-2 border-sky-300 shadow-md">
-                            <span class="block text-2xl sm:text-3xl font-black text-uasu-green">10+</span>
-                            <span class="text-xs sm:text-sm text-slate-800 font-bold">Active Welfare Initiatives</span>
-                        </div>
+        <!-- Hero Stats Cards -->
+        <div class="sky-hero-gradient py-10 border-b-4 border-uasu-navy shadow-xl">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="bg-white/90 p-4 rounded-xl border-2 border-sky-300 shadow-md">
+                        <span class="block text-2xl sm:text-3xl font-black text-uasu-navy">140+</span>
+                        <span class="text-xs sm:text-sm text-slate-800 font-bold">Academic Staff Members</span>
+                    </div>
+                    <div class="bg-white/90 p-4 rounded-xl border-2 border-sky-300 shadow-md">
+                        <span class="block text-2xl sm:text-3xl font-black text-uasu-green">100%</span>
+                        <span class="text-xs sm:text-sm text-slate-800 font-bold">CBA Compliance Pursuit</span>
+                    </div>
+                    <div class="bg-white/90 p-4 rounded-xl border-2 border-sky-300 shadow-md">
+                        <span class="block text-2xl sm:text-3xl font-black text-uasu-navy">24/7</span>
+                        <span class="text-xs sm:text-sm text-slate-800 font-bold">Grievance Support Desk</span>
+                    </div>
+                    <div class="bg-white/90 p-4 rounded-xl border-2 border-sky-300 shadow-md">
+                        <span class="block text-2xl sm:text-3xl font-black text-uasu-green">10+</span>
+                        <span class="text-xs sm:text-sm text-slate-800 font-bold">Active Welfare Initiatives</span>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
         <!-- Chapter Overview & Core Values -->
         <section id="about" class="py-16 bg-uasu-skyblue">
@@ -474,7 +471,7 @@
                         </div>
                         <div class="p-5">
                             <h3 class="font-bold text-lg text-uasu-navy">Dr. Zacharia Mburu</h3>
-                            <p class="text-xs text-uasu-green font-extrabold mb-2">Lecturer,Mathemathics</p>
+                            <p class="text-xs text-uasu-green font-extrabold mb-2">Lecturer, Mathemathics</p>
                             <p class="text-xs text-slate-600 mb-4 leading-relaxed font-medium">Presides over all Chapter Executive & General meetings, enforces constitutional governance, and co-signs official union agreements.</p>
                             <a href="mailto:treasurer.uasu@embuni.ac.ke" class="text-xs text-uasu-navy hover:underline flex items-center font-bold">
                                 <i class="fa-solid fa-envelope mr-1 text-uasu-gold"></i> chairman.uasu@embuni.ac.ke
@@ -484,7 +481,7 @@
 
                      <!-- Leader 3 -->
                     <div class="bg-white rounded-2xl shadow-md border-2 border-sky-300 overflow-hidden hover:shadow-xl transition">
-                        <div class="h-100 bg-slate-200 relative overflow-hidden">
+                        <div class="h-80 bg-slate-200 relative overflow-hidden">
                             <img src="assets/DrBoaz.jpg" alt="Dr. Boaz Kipyego Too" class="w-full h-full object-cover">
                             <span class="absolute bottom-2 left-2 bg-uasu-navy text-white text-xs px-2.5 py-1 rounded-md font-extrabold shadow">Treasurer</span>
                         </div>
@@ -498,7 +495,7 @@
                         </div>
                     </div>
 
-                     <!-- Leader 5 -->
+                     <!-- Leader 4 -->
                     <div class="bg-white rounded-2xl shadow-md border-2 border-sky-300 overflow-hidden hover:shadow-xl transition">
                         <div class="h-80 bg-slate-200 relative overflow-hidden">
                             <img src="assets/Karambu.jpg" alt="Dr. Kiende Karambu Gatimbu" class="w-full h-full object-cover">
@@ -513,9 +510,8 @@
                             </a>
                         </div>
                     </div>
-					
 
-                    <!-- Leader 2 -->
+                    <!-- Leader 5 -->
                     <div class="bg-white rounded-2xl shadow-md border-2 border-sky-300 overflow-hidden hover:shadow-xl transition">
                         <div class="h-80 bg-slate-200 relative overflow-hidden">
                             <img src="assets/jane.jpg" alt="Dr. Jennifer Jepkoech" class="w-full h-full object-cover">
@@ -531,7 +527,7 @@
                         </div>
                     </div>
 
-                    <!-- Leader 4 -->
+                    <!-- Leader 6 -->
                     <div class="bg-white rounded-2xl shadow-md border-2 border-sky-300 overflow-hidden hover:shadow-xl transition">
                         <div class="h-80 bg-slate-200 relative overflow-hidden">
                             <img src="assets/Agnes.jpg" alt="Dr. Agnes Koome" class="w-full h-full object-cover">
@@ -546,1149 +542,6 @@
                             </a>
                         </div>
                     </div>
-					
-					 <!-- Leader 5 -->
-                    <div class="bg-white rounded-2xl shadow-md border-2 border-sky-300 overflow-hidden hover:shadow-xl transition">
-                        <div class="h-80 bg-slate-200 relative overflow-hidden">
-                            <img src="assets/DrSarah.jpg" alt="Dr. Sarah Naulikha Kitui" class="w-full h-full object-cover">
-                            <span class="absolute bottom-2 left-2 bg-uasu-navy text-white text-xs px-2.5 py-1 rounded-md font-extrabold shadow">Deputy Chairperson</span>
-                        </div>
-                        <div class="p-5">
-                            <h3 class="font-bold text-lg text-uasu-navy">Dr. Sarah Naulikha Kituyi</h3>
-                            <p class="text-xs text-uasu-green font-extrabold mb-2">Lecturer, Biological Sciences</p>
-                            <p class="text-xs text-slate-600 mb-4 leading-relaxed font-medium"> Deputizes the Chairperson, performs all presidential duties in their absence, and oversees chapter standing committees.</p>
-                            <a href="mailto:treasurer.uasu@embuni.ac.ke" class="text-xs text-uasu-navy hover:underline flex items-center font-bold">
-                                <i class="fa-solid fa-envelope mr-1 text-uasu-gold"></i> asschairperson.uasu@embuni.ac.ke
-                            </a>
-                        </div>
-                    </div>
-					
-					 <!-- Leader 5 -->
-                    <div class="bg-white rounded-2xl shadow-md border-2 border-sky-300 overflow-hidden hover:shadow-xl transition">
-                        <div class="h-80 bg-slate-200 relative overflow-hidden">
-                            <img src="assets/onesmus.jpg" alt="Dr. onesmus ngetich" class="w-full h-full object-cover">
-                            <span class="absolute bottom-2 left-2 bg-uasu-navy text-white text-xs px-2.5 py-1 rounded-md font-extrabold shadow">Trustee</span>
-                        </div>
-                        <div class="p-5">
-                            <h3 class="font-bold text-lg text-uasu-navy">Dr. Onesmus Ng'etich</h3>
-                            <p class="text-xs text-uasu-green font-extrabold mb-2">Lecturer, Horticulture and Soil fertility</p>
-                            <p class="text-xs text-slate-600 mb-4 leading-relaxed font-medium"> Safeguards union assets, oversees their responsible management, and protects the long-term interests of union members.
-.</p>
-                            <a href="mailto:treasurer.uasu@embuni.ac.ke" class="text-xs text-uasu-navy hover:underline flex items-center font-bold">
-                                <i class="fa-solid fa-envelope mr-1 text-uasu-gold"></i> trustee.uasu@embuni.ac.ke
-                            </a>
-                        </div>
-                    </div>
-					
-					 <!-- Leader 5 -->
-                    <div class="bg-white rounded-2xl shadow-md border-2 border-sky-300 overflow-hidden hover:shadow-xl transition">
-                        <div class="h-80 bg-slate-200 relative overflow-hidden">
-                            <img src="assets/DrLusire.jpg" alt="Dr. Lusire Lumumba" class="w-full h-full object-cover">
-                            <span class="absolute bottom-2 left-2 bg-uasu-navy text-white text-xs px-2.5 py-1 rounded-md font-extrabold shadow">Trustee</span>
-                        </div>
-                        <div class="p-5">
-                            <h3 class="font-bold text-lg text-uasu-navy">Dr. Lusire Lumumba</h3>
-                            <p class="text-xs text-uasu-green font-extrabold mb-2">Lecturer, Kiswahili</p>
-                            <p class="text-xs text-slate-600 mb-4 leading-relaxed font-medium"> Safeguards union assets, oversees their responsible management, and protects the long-term interests of union members.</p>
-                            <a href="mailto:treasurer.uasu@embuni.ac.ke" class="text-xs text-uasu-navy hover:underline flex items-center font-bold">
-                                <i class="fa-solid fa-envelope mr-1 text-uasu-gold"></i> trustee1.uasu@embuni.ac.ke
-                            </a>
-                        </div>
-                    </div>
-					
-					 <!-- Leader 5 -->
-                    <div class="bg-white rounded-2xl shadow-md border-2 border-sky-300 overflow-hidden hover:shadow-xl transition">
-                        <div class="h-100 bg-slate-200 relative overflow-hidden">
-                            <img src="assets/DrGithaiga.jpg" alt="Dr.Michael Githaiga" class="w-full h-full object-cover">
-                            <span class="absolute bottom-2 left-2 bg-uasu-navy text-white text-xs px-2.5 py-1 rounded-md font-extrabold shadow">Trustee</span>
-                        </div>
-                        <div class="p-5">
-                            <h3 class="font-bold text-lg text-uasu-navy">Dr. Michael Githaiga</h3>
-                            <p class="text-xs text-uasu-green font-extrabold mb-2">Lecturer, Biological sciences</p>
-                            <p class="text-xs text-slate-600 mb-4 leading-relaxed font-medium"> Safeguards union assets, oversees their responsible management, and protects the long-term interests of union members.</p>
-                            <a href="mailto:treasurer.uasu@embuni.ac.ke" class="text-xs text-uasu-navy hover:underline flex items-center font-bold">
-                                <i class="fa-solid fa-envelope mr-1 text-uasu-gold"></i> trustee2.uasu@embuni.ac.ke
-                            </a>
-                        </div>
-                    </div>
-					
-				 <!-- Leader 5 -->
-                    <div class="bg-white rounded-2xl shadow-md border-2 border-sky-300 overflow-hidden hover:shadow-xl transition">
-                        <div class="h-80 bg-slate-200 relative overflow-hidden">
-                            <img src="assets/Sumba.jpg" alt="Mr.Jerry Sumba" class="w-full h-full object-cover">
-                            <span class="absolute bottom-2 left-2 bg-uasu-navy text-white text-xs px-2.5 py-1 rounded-md font-extrabold shadow">Delegate</span>
-                        </div>
-                        <div class="p-5">
-                            <h3 class="font-bold text-lg text-uasu-navy">Mr.Jerry Sumba</h3>
-                            <p class="text-xs text-uasu-green font-extrabold mb-2">Research Assistant , Economics</p>
-                            <p class="text-xs text-slate-600 mb-4 leading-relaxed font-medium"> Safeguards union assets, oversees their responsible management, and protects the long-term interests of union members.</p>
-                            <a href="mailto:treasurer.uasu@embuni.ac.ke" class="text-xs text-uasu-navy hover:underline flex items-center font-bold">
-                                <i class="fa-solid fa-envelope mr-1 text-uasu-gold"></i> delegate.uasu@embuni.ac.ke
-                            </a>
-                        </div>
-                    </div>	
-					
-                </div>
-            </div>
-        </section>
 
-        <!-- News & Announcements Section -->
-        <section id="news" class="py-16 bg-uasu-skyblue">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex flex-col md:flex-row md:items-end justify-between mb-8">
-                    <div>
-                        <h2 class="text-xs font-black text-uasu-navy uppercase tracking-widest px-3 py-1 bg-white/90 rounded-full inline-block shadow-sm mb-2 border border-sky-300">Updates & Bulletins</h2>
-                        <p class="text-3xl font-serif font-extrabold text-uasu-navy">Latest News & Announcements</p>
-                    </div>
-
-                    <!-- Category Filter Buttons -->
-                    <div class="flex flex-wrap gap-2 mt-4 md:mt-0" id="newsFilters">
-                        <button onclick="filterNews('all')" class="filter-btn active px-3.5 py-1.5 text-xs font-extrabold rounded-lg bg-uasu-navy text-white shadow">All</button>
-                        <button onclick="filterNews('cba')" class="filter-btn px-3.5 py-1.5 text-xs font-extrabold rounded-lg bg-white text-uasu-navy hover:bg-sky-100 border border-sky-300 shadow-sm">CBAs & Salaries</button>
-                        <button onclick="filterNews('welfare')" class="filter-btn px-3.5 py-1.5 text-xs font-extrabold rounded-lg bg-white text-uasu-navy hover:bg-sky-100 border border-sky-300 shadow-sm">Welfare</button>
-                        <button onclick="filterNews('action')" class="filter-btn px-3.5 py-1.5 text-xs font-extrabold rounded-lg bg-white text-uasu-navy hover:bg-sky-100 border border-sky-300 shadow-sm">Industrial Action</button>
-                    </div>
-                </div>
-
-                <!-- News Grid Container -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="newsGrid">
-                    <!-- Article Card 1 -->
-                    <div class="news-card bg-white rounded-2xl border-2 border-sky-300 shadow-md overflow-hidden flex flex-col justify-between hover:shadow-xl transition" data-category="cba">
-                        <div class="p-6">
-                            <div class="flex justify-between items-center mb-3">
-                                <span class="bg-sky-100 text-uasu-navy text-xs px-2.5 py-0.5 rounded-md font-bold border border-sky-300">CBAs & Salaries</span>
-                                <span class="text-xs font-semibold text-slate-500"><i class="fa-regular fa-clock mr-1"></i>Oct 1, 2026</span>
-                            </div>
-                            <h3 class="font-bold text-lg text-uasu-navy mb-2 hover:text-uasu-green transition cursor-pointer" onclick="openNewsModal('cba-update')">
-                                2025–2029 CBA Negotiations – Current Status
-                            </h3>
-                            <p class="text-xs text-slate-700 leading-relaxed font-medium line-clamp-3">
-                                2025–2029 CBA Negotiations – Current Status
-The 2025–2029 National CBA remains under negotiation between UASU, IPUCCF, the Government and other relevant stakeholders. The proposed agreement covers salaries, allowances, promotions, research support and other terms and conditions of service.
-
-UASU has continued to engage stakeholders on the outstanding issues, with financing of the proposed CBA remaining a key matter in the negotiations.
-
-Members are advised that the **2025–2029 National CBA has not yet been concluded or implemented**. The Chapter will continue to keep members informed through verified official updates as negotiations progress.
- </p>
-                        </div>
-                        <div class="px-6 pb-6 pt-0 border-t border-sky-100 mt-2">
-                            <button onclick="openNewsModal('cba-update')" class="text-xs font-black text-uasu-green hover:text-uasu-navy flex items-center pt-3">
-                                Read Full Article <i class="fa-solid fa-arrow-right ml-1"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Article Card 2 -->
-                    <div class="news-card bg-white rounded-2xl border-2 border-sky-300 shadow-md overflow-hidden flex flex-col justify-between hover:shadow-xl transition" data-category="welfare">
-                        <div class="p-6">
-                            <div class="flex justify-between items-center mb-3">
-                                <span class="bg-emerald-100 text-emerald-900 text-xs px-2.5 py-0.5 rounded-md font-bold border border-emerald-300">Welfare</span>
-                                <span class="text-xs font-semibold text-slate-500"><i class="fa-regular fa-clock mr-1"></i>Sep 24, 2026</span>
-                            </div>
-                            <h3 class="font-bold text-lg text-uasu-navy mb-2 hover:text-uasu-green transition cursor-pointer" onclick="openNewsModal('medical-scheme')">
-                                Enhanced Inpatient & Outpatient Medical Scheme Coverage Terms 2026/2027
-                            </h3>
-                            <p class="text-xs text-slate-700 leading-relaxed font-medium line-clamp-3">
-                                The Chapter Executive has finalized negotiations regarding the university staff medical scheme provider, ensuring expanded specialist access...
-                            </p>
-                        </div>
-                        <div class="px-6 pb-6 pt-0 border-t border-sky-100 mt-2">
-                            <button onclick="openNewsModal('medical-scheme')" class="text-xs font-black text-uasu-green hover:text-uasu-navy flex items-center pt-3">
-                                Read Full Article <i class="fa-solid fa-arrow-right ml-1"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Article Card 3 -->
-                    <div class="news-card bg-white rounded-2xl border-2 border-sky-300 shadow-md overflow-hidden flex flex-col justify-between hover:shadow-xl transition" data-category="action">
-                        <div class="p-6">
-                            <div class="flex justify-between items-center mb-3">
-                                <span class="bg-amber-100 text-amber-900 text-xs px-2.5 py-0.5 rounded-md font-bold border border-amber-300">Industrial Action</span>
-                                <span class="text-xs font-semibold text-slate-500"><i class="fa-regular fa-clock mr-1"></i>Sep 15, 2026</span>
-                            </div>
-                            <h3 class="font-bold text-lg text-uasu-navy mb-2 hover:text-uasu-green transition cursor-pointer" onclick="openNewsModal('agm-resolution')">
-                                Special General Meeting (SGM) Resolution Notice Regarding Workloads
-                            </h3>
-                            <p class="text-xs text-slate-700 leading-relaxed font-medium line-clamp-3">
-                                Members assembled at the Charter Hall passed key resolutions regarding teaching overload compensation caps and part-time lecturer claim backlogs...
-                            </p>
-                        </div>
-                        <div class="px-6 pb-6 pt-0 border-t border-sky-100 mt-2">
-                            <button onclick="openNewsModal('agm-resolution')" class="text-xs font-black text-uasu-green hover:text-uasu-navy flex items-center pt-3">
-                                Read Full Article <i class="fa-solid fa-arrow-right ml-1"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-<!-- Documents & Resources Center -->
-<section id="resources" class="py-16 bg-sky-200/90 border-y-2 border-sky-300">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-3xl mx-auto mb-12">
-            <h2 class="text-xs font-black text-uasu-navy uppercase tracking-widest px-3 py-1 bg-white rounded-full inline-block shadow-sm mb-2 border border-sky-300">Resource Library</h2>
-            <p class="text-3xl font-serif font-bold text-uasu-navy">CBAs, Constitution & Downloadable Forms</p>
-            <p class="mt-2 text-slate-800 font-semibold text-sm">Access official legal agreements, constitution, meeting minutes, and welfare application templates.</p>
-        </div>
-
-        <div class="bg-white rounded-2xl p-6 shadow-lg border-2 border-sky-300">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-
-                <!-- Resource Item 1 -->
-                <div class="p-4 rounded-xl border-2 border-sky-200 hover:border-uasu-navy transition flex items-start space-x-3 bg-sky-50/60">
-                    <div class="p-3 bg-red-100 text-red-600 rounded-lg border border-red-200">
-                        <i class="fa-solid fa-file-pdf text-2xl"></i>
-                    </div>
-                    <div class="flex-grow">
-                        <h4 class="font-bold text-sm text-uasu-navy">BRIEFING</h4>
-                        <p class="text-xs text-slate-500 mb-2">PDF • Legal Framework</p>
-                        <a href="documents/UASU_University_of_Embu_2025_2029_CBA_Briefing_CPA_Dr_Mbugua.pdf"
-                           download="UASU_CBA_Briefing.pdf"
-                           class="text-xs font-extrabold text-uasu-green hover:underline flex items-center"
-                           onclick="downloadResource(event, this)">
-                            <i class="fa-solid fa-download mr-1"></i> Download File
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Resource Item 2 -->
-                <div class="p-4 rounded-xl border-2 border-sky-200 hover:border-uasu-navy transition flex items-start space-x-3 bg-sky-50/60">
-                    <div class="p-3 bg-red-100 text-red-600 rounded-lg border border-red-200">
-                        <i class="fa-solid fa-file-pdf text-2xl"></i>
-                    </div>
-                    <div class="flex-grow">
-                        <h4 class="font-bold text-sm text-uasu-navy">IPUCCF COUNTER OFFER</h4>
-                        <p class="text-xs text-slate-500 mb-2">PDF • COUNTER OFFER</p>
-                        <a href="documents/IPUCCF.pdf"
-                           download="Counter Offer.pdf"
-                           class="text-xs font-extrabold text-uasu-green hover:underline flex items-center"
-                           onclick="downloadResource(event, this)">
-                            <i class="fa-solid fa-download mr-1"></i> Download File
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Resource Item 3 -->
-                <div class="p-4 rounded-xl border-2 border-sky-200 hover:border-uasu-navy transition flex items-start space-x-3 bg-sky-50/60">
-                    <div class="p-3 bg-blue-100 text-blue-700 rounded-lg border border-blue-200">
-                        <i class="fa-solid fa-file-word text-2xl"></i>
-                    </div>
-                    <div class="flex-grow">
-                        <h4 class="font-bold text-sm text-uasu-navy">LETTER TO SRC ON 2025-2029 CBA</h4>
-                        <p class="text-xs text-slate-500 mb-2">pdf • Items</p>
-                        <a href="documents/Letter to SRC on the 2025-2029 CBAs - 23rd September, 2026(1).pdf"
-                           download="Letter to SRC on 2025-2029 CBA.pdf"
-                           class="text-xs font-extrabold text-uasu-green hover:underline flex items-center"
-                           onclick="downloadResource(event, this)">
-                            <i class="fa-solid fa-download mr-1"></i> Download File
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Resource Item 4 -->
-                <div class="p-4 rounded-xl border-2 border-sky-200 hover:border-uasu-navy transition flex items-start space-x-3 bg-sky-50/60">
-                    <div class="p-3 bg-emerald-100 text-emerald-700 rounded-lg border border-emerald-200">
-                        <i class="fa-solid fa-file-invoice text-2xl"></i>
-                    </div>
-                    <div class="flex-grow">
-                        <h4 class="font-bold text-sm text-uasu-navy">UASU MEMORANDUM ON TEPF BILL 2026 -28TH SEPT 2026</h4>
-                        <p class="text-xs text-slate-500 mb-2">PDF • MEMORANDUM ON TEPF BILL</p>
-                        <a href="documents/UASU MEMORANDUM ON TEPF BILL 2026 -28TH SEPT 2026.pdf"
-                           download="UASU MEMORANDUM ON TEPF BILL 2026 -28TH SEPT 2026.pdf"
-                           class="text-xs font-extrabold text-uasu-green hover:underline flex items-center"
-                           onclick="downloadResource(event, this)">
-                            <i class="fa-solid fa-download mr-1"></i> Download File
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Resource Item 5 -->
-                <div class="p-4 rounded-xl border-2 border-sky-200 hover:border-uasu-navy transition flex items-start space-x-3 bg-sky-50/60">
-                    <div class="p-3 bg-red-100 text-red-600 rounded-lg border border-red-200">
-                        <i class="fa-solid fa-file-pdf text-2xl"></i>
-                    </div>
-                    <div class="flex-grow">
-                        <h4 class="font-bold text-sm text-uasu-navy">UASU Strike Launch Press Release 2 Oct 2026</h4>
-                        <p class="text-xs text-slate-500 mb-2">PDF • Official Record</p>
-                        <a href="documents/UASU Strike Launch Press Release 2 Oct 2026.pdf"
-                           download="UASU Strike Launch Press Release 2 Oct 2026.pdf"
-                           class="text-xs font-extrabold text-uasu-green hover:underline flex items-center"
-                           onclick="downloadResource(event, this)">
-                            <i class="fa-solid fa-download mr-1"></i> Download File
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Resource Item 6 -->
-                <div class="p-4 rounded-xl border-2 border-sky-200 hover:border-uasu-navy transition flex items-start space-x-3 bg-sky-50/60">
-                    <div class="p-3 bg-purple-100 text-purple-700 rounded-lg border border-purple-200">
-                        <i class="fa-solid fa-file-contract text-2xl"></i>
-                    </div>
-                    <div class="flex-grow">
-                        <h4 class="font-bold text-sm text-uasu-navy">SRC Review of the 2025-2029 CBAs  for Public Universities- 18th September, 2026</h4>
-                        <p class="text-xs text-slate-500 mb-2">PDF • SRC Review of the 2025-2029</p>
-                        <a href="documents/SRC Review of the 2025-2029 CBAs  for Public Universities- 18th September, 2026(1)(3).pdf"
-                           download="SRC Review of the 2025-2029 CBAs  for Public Universities- 18th September, 2026(1)(3).pdf"
-                           class="text-xs font-extrabold text-uasu-green hover:underline flex items-center"
-                           onclick="downloadResource(event, this)">
-                            <i class="fa-solid fa-download mr-1"></i> Download File
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Resource Download Script -->
-<script>
-async function downloadResource(event, link) {
-    event.preventDefault();
-
-    const fileUrl = link.href;
-    const fileName = link.getAttribute("download") || "resource.pdf";
-    const originalHTML = link.innerHTML;
-
-    // Show loading feedback
-    link.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-1"></i> Downloading...';
-    link.style.pointerEvents = "none";
-    link.style.opacity = "0.7";
-
-    try {
-        const response = await fetch(fileUrl);
-
-        if (!response.ok) {
-            throw new Error("Unable to retrieve the file.");
-        }
-
-        const blob = await response.blob();
-        const blobUrl = URL.createObjectURL(blob);
-
-        const downloadLink = document.createElement("a");
-        downloadLink.href = blobUrl;
-        downloadLink.download = fileName;
-        downloadLink.style.display = "none";
-
-        document.body.appendChild(downloadLink);
-        downloadLink.click();
-        downloadLink.remove();
-
-        setTimeout(() => URL.revokeObjectURL(blobUrl), 1000);
-
-    } catch (error) {
-        console.error("Download failed, using fallback:", error);
-
-        // Fallback: open in NEW TAB so it never replaces your page.
-        // The browser will still attempt to download it (thanks to the download attribute),
-        // and if it can't, it opens in a new tab instead of covering your site.
-        const fallbackLink = document.createElement("a");
-        fallbackLink.href = fileUrl;
-        fallbackLink.download = fileName;
-        fallbackLink.target = "_blank";      // ← KEY FIX: opens in new tab
-        fallbackLink.rel = "noopener noreferrer";
-        fallbackLink.style.display = "none";
-
-        document.body.appendChild(fallbackLink);
-        fallbackLink.click();
-        fallbackLink.remove();
-    } finally {
-        // Restore button text after a short delay
-        setTimeout(() => {
-            link.innerHTML = originalHTML;
-            link.style.pointerEvents = "auto";
-            link.style.opacity = "1";
-        }, 800);
-    }
-}
-</script>
-  
-		   
-        <!-- Interactive Member Portal & Welfare Tools -->
-        <section id="portal" class="py-16 bg-uasu-skyblue">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-12">
-                    <h2 class="text-xs font-black text-uasu-navy uppercase tracking-widest px-3 py-1 bg-white/90 rounded-full inline-block shadow-sm mb-2 border border-sky-300">Member Portal Tools</h2>
-                    <p class="text-3xl font-serif font-bold text-uasu-navy">Interactive Academic Services</p>
-                    <p class="mt-2 text-slate-900 font-semibold text-sm">Calculate CBA scale estimates, register online for membership, or submit grievances directly to the chapter executive.</p>
-                </div>
-
-                <!-- Tabs Header -->
-                <div class="flex border-b-2 border-uasu-navy justify-center space-x-2 sm:space-x-8 mb-8">
-                    <button id="tabCalcBtn" onclick="switchPortalTab('calculator')" class="portal-tab-btn px-5 py-3 font-bold text-sm border-b-4 border-uasu-navy text-uasu-navy flex items-center bg-white rounded-t-xl shadow">
-                        <i class="fa-solid fa-calculator mr-2 text-uasu-gold"></i> CBA Pay Estimator
-                    </button>
-                    <button id="tabRegBtn" onclick="switchPortalTab('register')" class="portal-tab-btn px-5 py-3 font-bold text-sm border-b-4 border-transparent text-uasu-navy hover:bg-white/60 rounded-t-xl flex items-center">
-                        <i class="fa-solid fa-user-plus mr-2 text-uasu-green"></i> Online Membership
-                    </button>
-                    <button id="tabGrievanceBtn" onclick="switchPortalTab('grievance')" class="portal-tab-btn px-5 py-3 font-bold text-sm border-b-4 border-transparent text-uasu-navy hover:bg-white/60 rounded-t-xl flex items-center">
-                        <i class="fa-solid fa-shield-cat mr-2 text-red-600"></i> Grievance Desk
-                    </button>
-                </div>
-
-                <!-- Tab Content 1: Salary & Allowance Estimator -->
-                <div id="calculator" class="portal-tab-content bg-white p-6 sm:p-8 rounded-2xl border-2 border-sky-300 shadow-xl">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                        <div>
-                            <h3 class="text-xl font-bold text-uasu-navy mb-4">Academic CBA Pay Estimator</h3>
-                            <p class="text-xs text-slate-600 mb-6 font-medium leading-relaxed">Select your academic grade and notch step to estimate basic pay and CBA-negotiated house allowances based on current agreements.</p>
-                            
-                            <form id="payEstimatorForm" class="space-y-4">
-                                <div>
-                                    <label class="block text-xs font-bold text-slate-700 mb-1">Academic Cadre Grade</label>
-                                    <select id="cadreSelect" class="w-full px-3.5 py-2.5 bg-sky-50 border-2 border-sky-200 rounded-lg text-sm font-bold focus:ring-2 focus:ring-uasu-navy focus:outline-none text-slate-800">
-                                        <option value="lecturer">Lecturer (Grade 12)</option>
-                                        <option value="seniorLecturer">Senior Lecturer (Grade 13)</option>
-                                        <option value="assocProf">Associate Professor (Grade 14)</option>
-                                        <option value="professor">Professor (Grade 15)</option>
-                                    </select>
-                                </div>
-
-                                <div>
-                                    <label class="block text-xs font-bold text-slate-700 mb-1">Notch / Step Experience</label>
-                                    <select id="notchSelect" class="w-full px-3.5 py-2.5 bg-sky-50 border-2 border-sky-200 rounded-lg text-sm font-bold focus:ring-2 focus:ring-uasu-navy focus:outline-none text-slate-800">
-                                        <option value="1">Entry Notch (Step 1)</option>
-                                        <option value="2">Mid Notch (Step 3)</option>
-                                        <option value="3">Maximum Notch (Step 6)</option>
-                                    </select>
-                                </div>
-
-                                <div class="pt-2">
-                                    <button type="button" onclick="calculateSalary()" class="w-full py-3 bg-uasu-navy text-white font-bold text-sm rounded-lg hover:bg-uasu-darknavy transition shadow-md flex items-center justify-center">
-                                        <i class="fa-solid fa-calculator mr-2 text-uasu-gold"></i> Calculate Figures
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-
-                        <!-- Result Display -->
-                        <div class="bg-sky-50 p-6 rounded-xl border-2 border-sky-300 flex flex-col justify-between shadow-inner">
-                            <div>
-                                <div class="flex justify-between items-center pb-3 border-b border-sky-200 mb-4">
-                                    <span class="text-xs font-black uppercase tracking-wider text-uasu-navy">Scale Breakdown</span>
-                                    <span class="text-xs bg-emerald-100 text-emerald-800 font-extrabold px-2.5 py-0.5 rounded border border-emerald-300">CBA Rate</span>
-                                </div>
-                                <div class="space-y-3">
-                                    <div class="flex justify-between text-sm">
-                                        <span class="text-slate-600 font-bold">Estimated Basic Salary:</span>
-                                        <span id="basicSalaryResult" class="font-extrabold text-uasu-navy">KES 110,550.00</span>
-                                    </div>
-                                    <div class="flex justify-between text-sm">
-                                        <span class="text-slate-600 font-bold">House Allowance:</span>
-                                        <span id="houseAllowanceResult" class="font-extrabold text-uasu-navy">KES 55,300.00</span>
-                                    </div>
-                                    <div class="flex justify-between text-sm">
-                                        <span class="text-slate-600 font-bold">Standard Union Dues (1%):</span>
-                                        <span id="unionDuesResult" class="font-extrabold text-red-600">- KES 1,105.50</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="mt-6 pt-4 border-t-2 border-sky-200">
-                                <div class="flex justify-between items-center">
-                                    <span class="text-sm font-bold text-slate-800">Estimated Monthly Gross:</span>
-                                    <span id="grossTotalResult" class="text-2xl font-black text-uasu-green">KES 165,850.00</span>
-                                </div>
-                                <p class="text-[11px] text-slate-500 mt-2 font-medium">*Note: Figures are indicative based on national CBA scales. Excludes medical benefits and statutory taxes.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tab Content 2: Online Registration Form -->
-                <div id="register" class="portal-tab-content hidden bg-white p-6 sm:p-8 rounded-2xl border-2 border-sky-300 shadow-xl">
-                    <div class="max-w-2xl mx-auto">
-                        <h3 class="text-xl font-bold text-uasu-navy mb-2 text-center">UASU Membership Application Form</h3>
-                        <p class="text-xs text-slate-600 mb-6 text-center font-medium">Fill out the fields below to register as an active academic union member at University of Embu.</p>
-
-                        <form id="membershipForm" onsubmit="handleRegistration(event)" class="space-y-4">
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div>
-                                    <label class="block text-xs font-bold text-slate-700 mb-1">Full Name *</label>
-                                    <input type="text" required placeholder="e.g. Dr. Jane Doe" class="w-full px-3 py-2 bg-sky-50 border border-sky-200 rounded-lg text-sm font-medium focus:outline-none focus:border-uasu-navy">
-                                </div>
-                                <div>
-                                    <label class="block text-xs font-bold text-slate-700 mb-1">Staff Payroll Number *</label>
-                                    <input type="text" required placeholder="e.g. PF/10928" class="w-full px-3 py-2 bg-sky-50 border border-sky-200 rounded-lg text-sm font-medium focus:outline-none focus:border-uasu-navy">
-                                </div>
-                            </div>
-
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div>
-                                    <label class="block text-xs font-bold text-slate-700 mb-1">School / Faculty *</label>
-                                    <select required class="w-full px-3 py-2 bg-sky-50 border border-sky-200 rounded-lg text-sm font-medium focus:outline-none focus:border-uasu-navy">
-                                        <option value="">Select School</option>
-                                        <option value="Agri">School of Agriculture</option>
-                                        <option value="Pure">School of Pure and Applied Sciences</option>
-                                        <option value="Educ">School of Education and Social Sciences</option>
-                                        <option value="Biz">School of Business and Economics</option>
-                                        <option value="Nurs">School of Nursing</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <label class="block text-xs font-bold text-slate-700 mb-1">Academic Cadre *</label>
-                                    <select required class="w-full px-3 py-2 bg-sky-50 border border-sky-200 rounded-lg text-sm font-medium focus:outline-none focus:border-uasu-navy">
-                                        <option value="Tutorial Fellow">Tutorial Fellow</option>
-                                        <option value="Lecturer">Lecturer</option>
-                                        <option value="Senior Lecturer">Senior Lecturer</option>
-                                        <option value="Associate Professor">Associate Professor</option>
-                                        <option value="Professor">Professor</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div>
-                                    <label class="block text-xs font-bold text-slate-700 mb-1">Official Email Address *</label>
-                                    <input type="email" required placeholder="j.doe@embuni.ac.ke" class="w-full px-3 py-2 bg-sky-50 border border-sky-200 rounded-lg text-sm font-medium focus:outline-none focus:border-uasu-navy">
-                                </div>
-                                <div>
-                                    <label class="block text-xs font-bold text-slate-700 mb-1">Phone Number *</label>
-                                    <input type="tel" required placeholder="+254 7XX XXX XXX" class="w-full px-3 py-2 bg-sky-50 border border-sky-200 rounded-lg text-sm font-medium focus:outline-none focus:border-uasu-navy">
-                                </div>
-                            </div>
-
-                            <div>
-                                <label class="block text-xs font-bold text-slate-700 mb-1">Attach Signed Check-Off Form (Optional Simulation)</label>
-                                <input type="file" class="w-full text-xs text-slate-600 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-xs file:font-bold file:bg-uasu-navy file:text-white hover:file:bg-uasu-darknavy">
-                            </div>
-
-                            <div class="flex items-center space-x-2 pt-2">
-                                <input type="checkbox" id="termsCheck" required class="rounded text-uasu-navy">
-                                <label for="termsCheck" class="text-xs font-semibold text-slate-700">I authorize monthly check-off deductions as per UASU Constitution rules.</label>
-                            </div>
-
-                            <button type="submit" class="w-full py-3 bg-uasu-green text-white font-bold text-sm rounded-lg hover:bg-uasu-lightgreen transition shadow-md">
-                                Submit Membership Application
-                            </button>
-                        </form>
-                    </div>
-                </div>
-
-                <!-- Tab Content 3: Grievance Reporting Form -->
-                <div id="grievance" class="portal-tab-content hidden bg-white p-6 sm:p-8 rounded-2xl border-2 border-sky-300 shadow-xl">
-                    <div class="max-w-2xl mx-auto">
-                        <h3 class="text-xl font-bold text-uasu-navy mb-2 text-center">Confidential Member Grievance Desk</h3>
-                        <p class="text-xs text-slate-600 mb-6 text-center font-medium leading-relaxed">Report workload disputes, promotion delays, medical cover claims, or workplace discrimination. Generated tracking code ensures privacy.</p>
-
-                        <form id="grievanceForm" onsubmit="handleGrievanceSubmit(event)" class="space-y-4">
-                            <div>
-                                <label class="block text-xs font-bold text-slate-700 mb-1">Grievance Category *</label>
-                                <select required class="w-full px-3 py-2 bg-sky-50 border border-sky-200 rounded-lg text-sm font-medium focus:outline-none focus:border-uasu-navy">
-                                    <option value="">Select Category</option>
-                                    <option value="Workload">Teaching Overload / Unpaid Hours</option>
-                                    <option value="Promotion">Promotion & Grading Delay</option>
-                                    <option value="Medical">Medical Insurance Claim Dispute</option>
-                                    <option value="Harassment">Workplace Rights Violation</option>
-                                    <option value="Other">General Administration Issue</option>
-                                </select>
-                            </div>
-
-                            <div>
-                                <label class="block text-xs font-bold text-slate-700 mb-1">Detailed Description of Incident / Issue *</label>
-                                <textarea required rows="4" placeholder="Provide relevant dates, department details, and specifics..." class="w-full px-3 py-2 bg-sky-50 border border-sky-200 rounded-lg text-sm font-medium focus:outline-none focus:border-uasu-navy"></textarea>
-                            </div>
-
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div>
-                                    <label class="block text-xs font-bold text-slate-700 mb-1">Your Name (Optional)</label>
-                                    <input type="text" placeholder="Leave blank for anonymous" class="w-full px-3 py-2 bg-sky-50 border border-sky-200 rounded-lg text-sm font-medium focus:outline-none focus:border-uasu-navy">
-                                </div>
-                                <div>
-                                    <label class="block text-xs font-bold text-slate-700 mb-1">Contact Email / Phone</label>
-                                    <input type="text" placeholder="Required if feedback needed" class="w-full px-3 py-2 bg-sky-50 border border-sky-200 rounded-lg text-sm font-medium focus:outline-none focus:border-uasu-navy">
-                                </div>
-                            </div>
-
-                            <button type="submit" class="w-full py-3 bg-red-700 text-white font-bold text-sm rounded-lg hover:bg-red-800 transition shadow-md">
-                                Submit Confidential Report
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Upcoming Events Calendar -->
-        <section id="events" class="py-16 bg-sky-200/90 border-y-2 border-sky-300">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-12">
-                    <h2 class="text-xs font-black text-uasu-navy uppercase tracking-widest px-3 py-1 bg-white rounded-full inline-block shadow-sm mb-2 border border-sky-300">Engage With Us</h2>
-                    <p class="text-3xl font-serif font-bold text-uasu-navy">Upcoming Chapter Meetings & Events</p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <!-- Event 1 -->
-                    <div class="bg-white rounded-2xl p-6 border-2 border-sky-300 shadow-md flex flex-col justify-between hover:shadow-xl transition">
-                        <div>
-                            <div class="flex items-center space-x-3 mb-4">
-                                <div class="bg-uasu-navy text-white text-center rounded-xl p-2.5 w-14 shadow">
-                                    <span class="block text-xs uppercase font-bold text-uasu-gold">OCT</span>
-                                    <span class="block text-xl font-black leading-none">18</span>
-                                </div>
-                                <div>
-                                    <span class="text-xs bg-amber-100 text-amber-900 font-bold px-2 py-0.5 rounded border border-amber-300">Chapter Meeting</span>
-                                    <h4 class="font-bold text-uasu-navy text-base mt-1">Special General Meeting (SGM)</h4>
-                                </div>
-                            </div>
-                            <p class="text-xs text-slate-700 leading-relaxed font-medium mb-3">Deliberation on National Executive Council (NEC) directives regarding CBA arbitration and local welfare amendments.</p>
-                            <div class="text-xs text-slate-600 font-bold space-y-1 mb-4">
-                                <div><i class="fa-regular fa-clock text-uasu-green mr-2"></i>2:00 PM - 5:00 PM</div>
-                                <div><i class="fa-solid fa-location-dot text-uasu-green mr-2"></i>Main Campus Charter Hall</div>
-                            </div>
-                        </div>
-                        <button onclick="simulateRSVP('Special General Meeting')" class="w-full py-2 bg-sky-100 text-uasu-navy font-bold text-xs rounded-lg hover:bg-uasu-navy hover:text-white transition shadow-sm">
-                            RSVP / Add to Calendar
-                        </button>
-                    </div>
-
-                    <!-- Event 2 -->
-                    <div class="bg-white rounded-2xl p-6 border-2 border-sky-300 shadow-md flex flex-col justify-between hover:shadow-xl transition">
-                        <div>
-                            <div class="flex items-center space-x-3 mb-4">
-                                <div class="bg-uasu-green text-white text-center rounded-xl p-2.5 w-14 shadow">
-                                    <span class="block text-xs uppercase font-bold text-white">NOV</span>
-                                    <span class="block text-xl font-black leading-none">05</span>
-                                </div>
-                                <div>
-                                    <span class="text-xs bg-emerald-100 text-emerald-900 font-bold px-2 py-0.5 rounded border border-emerald-300">Welfare</span>
-                                    <h4 class="font-bold text-uasu-navy text-base mt-1">Academic Staff Welfare Workshop</h4>
-                                </div>
-                            </div>
-                            <p class="text-xs text-slate-700 leading-relaxed font-medium mb-3">Financial management, pension planning, and wellness sensitization drive organized by the Welfare Committee.</p>
-                            <div class="text-xs text-slate-600 font-bold space-y-1 mb-4">
-                                <div><i class="fa-regular fa-clock text-uasu-green mr-2"></i>9:00 AM - 1:00 PM</div>
-                                <div><i class="fa-solid fa-location-dot text-uasu-green mr-2"></i>School of Business Complex</div>
-                            </div>
-                        </div>
-                        <button onclick="simulateRSVP('Academic Welfare Workshop')" class="w-full py-2 bg-sky-100 text-uasu-navy font-bold text-xs rounded-lg hover:bg-uasu-navy hover:text-white transition shadow-sm">
-                            RSVP / Add to Calendar
-                        </button>
-                    </div>
-
-                    <!-- Event 3 -->
-                    <div class="bg-white rounded-2xl p-6 border-2 border-sky-300 shadow-md flex flex-col justify-between hover:shadow-xl transition">
-                        <div>
-                            <div class="flex items-center space-x-3 mb-4">
-                                <div class="bg-uasu-navy text-white text-center rounded-xl p-2.5 w-14 shadow">
-                                    <span class="block text-xs uppercase font-bold text-uasu-gold">DEC</span>
-                                    <span class="block text-xl font-black leading-none">12</span>
-                                </div>
-                                <div>
-                                    <span class="text-xs bg-sky-100 text-uasu-navy font-bold px-2 py-0.5 rounded border border-sky-300">Social</span>
-                                    <h4 class="font-bold text-uasu-navy text-base mt-1">End of Year Academic Luncheon</h4>
-                                </div>
-                            </div>
-                            <p class="text-xs text-slate-700 leading-relaxed font-medium mb-3">Annual gathering celebrating scholarly achievements, retiring members recognition, and union fraternity networking.</p>
-                            <div class="text-xs text-slate-600 font-bold space-y-1 mb-4">
-                                <div><i class="fa-regular fa-clock text-uasu-green mr-2"></i>12:30 PM Onwards</div>
-                                <div><i class="fa-solid fa-location-dot text-uasu-green mr-2"></i>Senior Common Room</div>
-                            </div>
-                        </div>
-                        <button onclick="simulateRSVP('End of Year Luncheon')" class="w-full py-2 bg-sky-100 text-uasu-navy font-bold text-xs rounded-lg hover:bg-uasu-navy hover:text-white transition shadow-sm">
-                            RSVP / Add to Calendar
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact & FAQs -->
-        <section id="contact" class="py-16 bg-uasu-skyblue">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                    <!-- Contact Form & Details -->
-                    <div>
-                        <h2 class="text-xs font-black text-uasu-navy uppercase tracking-widest px-3 py-1 bg-white/90 rounded-full inline-block shadow-sm mb-2 border border-sky-300">Get In Touch</h2>
-                        <h3 class="text-3xl font-serif font-bold text-uasu-navy mb-6">Contact Secretariat</h3>
-
-                        <div class="space-y-4 mb-8">
-                            <div class="flex items-start space-x-3 bg-white p-3.5 rounded-xl border-2 border-sky-300 shadow-sm">
-                                <div class="p-2.5 bg-sky-100 text-uasu-navy rounded-lg mt-0.5">
-                                    <i class="fa-solid fa-building-columns"></i>
-                                </div>
-                                <div>
-                                    <h5 class="font-bold text-sm text-uasu-navy">Physical Secretariat</h5>
-                                    <p class="text-xs text-slate-700 font-medium">UASU Secretariat Office, Admin Block 1st Floor, University of Embu Main Campus</p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start space-x-3 bg-white p-3.5 rounded-xl border-2 border-sky-300 shadow-sm">
-                                <div class="p-2.5 bg-emerald-100 text-uasu-green rounded-lg mt-0.5">
-                                    <i class="fa-solid fa-envelope"></i>
-                                </div>
-                                <div>
-                                    <h5 class="font-bold text-sm text-uasu-navy">Official Email Address</h5>
-                                    <p class="text-xs text-slate-700 font-medium">P.O. Box 6-60100, Embu, Kenya • Email: uasu@embuni.ac.ke</p>
-                                </div>
-                            </div>
-
-                            <div class="flex items-start space-x-3 bg-white p-3.5 rounded-xl border-2 border-sky-300 shadow-sm">
-                                <div class="p-2.5 bg-amber-100 text-amber-900 rounded-lg mt-0.5">
-                                    <i class="fa-solid fa-phone"></i>
-                                </div>
-                                <div>
-                                    <h5 class="font-bold text-sm text-uasu-navy">Hotline & Extension</h5>
-                                    <p class="text-xs text-slate-700 font-medium">+254 (0) 700 000 000 / Ext 1042 (UoEm Exchange)</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Direct Form -->
-                        <form onsubmit="handleContactSubmit(event)" class="space-y-3 bg-white p-6 rounded-2xl border-2 border-sky-300 shadow-lg">
-                            <h4 class="font-bold text-sm text-uasu-navy mb-2">Send Direct Inquiry</h4>
-                            <div class="grid grid-cols-2 gap-3">
-                                <input type="text" required placeholder="Your Name" class="px-3 py-2 bg-sky-50 border border-sky-200 rounded-lg text-xs font-medium focus:outline-none">
-                                <input type="email" required placeholder="Your Email" class="px-3 py-2 bg-sky-50 border border-sky-200 rounded-lg text-xs font-medium focus:outline-none">
-                            </div>
-                            <input type="text" placeholder="Subject" class="w-full px-3 py-2 bg-sky-50 border border-sky-200 rounded-lg text-xs font-medium focus:outline-none">
-                            <textarea rows="3" required placeholder="Your message or feedback..." class="w-full px-3 py-2 bg-sky-50 border border-sky-200 rounded-lg text-xs font-medium focus:outline-none"></textarea>
-                            <button type="submit" class="w-full py-2.5 bg-uasu-navy text-white text-xs font-bold rounded-lg hover:bg-uasu-darknavy transition shadow-md">
-                                Send Message
-                            </button>
-                        </form>
-                    </div>
-
-                    <!-- FAQ Accordion & Render Guide -->
-                    <div>
-                        <h2 class="text-xs font-black text-uasu-navy uppercase tracking-widest px-3 py-1 bg-white/90 rounded-full inline-block shadow-sm mb-2 border border-sky-300">Member FAQ</h2>
-                        <h3 class="text-3xl font-serif font-bold text-uasu-navy mb-6">Frequently Asked Questions</h3>
-
-                        <div class="space-y-3" id="faqAccordion">
-                            <!-- FAQ 1 -->
-                            <div class="border-2 border-sky-300 rounded-xl overflow-hidden shadow-sm bg-white">
-                                <button onclick="toggleFaq(this)" class="w-full text-left p-4 font-bold text-sm text-uasu-navy flex justify-between items-center">
-                                    <span>Who is eligible to join UASU Embu Chapter?</span>
-                                    <i class="fa-solid fa-chevron-down text-xs transition-transform"></i>
-                                </button>
-                                <div class="faq-answer hidden p-4 text-xs text-slate-700 leading-relaxed font-medium bg-sky-50 border-t border-sky-200">
-                                    All academic teaching staff employed by University of Embu, including Tutorial Fellows, Lecturers, Senior Lecturers, Associate Professors, and Full Professors are eligible.
-                                </div>
-                            </div>
-
-                            <!-- FAQ 2 -->
-                            <div class="border-2 border-sky-300 rounded-xl overflow-hidden shadow-sm bg-white">
-                                <button onclick="toggleFaq(this)" class="w-full text-left p-4 font-bold text-sm text-uasu-navy flex justify-between items-center">
-                                    <span>How are monthly union dues calculated?</span>
-                                    <i class="fa-solid fa-chevron-down text-xs transition-transform"></i>
-                                </button>
-                                <div class="faq-answer hidden p-4 text-xs text-slate-700 leading-relaxed font-medium bg-sky-50 border-t border-sky-200">
-                                    Union dues are set at 1% of basic salary as mandated by the UASU Constitution. They are deducted automatically via the university payroll check-off system after submitting the signed authorization form.
-                                </div>
-                            </div>
-
-                            <!-- FAQ 3 -->
-                            <div class="border-2 border-sky-300 rounded-xl overflow-hidden shadow-sm bg-white">
-                                <button onclick="toggleFaq(this)" class="w-full text-left p-4 font-bold text-sm text-uasu-navy flex justify-between items-center">
-                                    <span>What protection does the chapter offer?</span>
-                                    <i class="fa-solid fa-chevron-down text-xs transition-transform"></i>
-                                </button>
-                                <div class="faq-answer hidden p-4 text-xs text-slate-700 leading-relaxed font-medium bg-sky-50 border-t border-sky-200">
-                                    Members receive legal advocacy during internal proceedings, support on promotion appeals, medical cover oversight, and representation during CBA negotiations.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer Section -->
-    <footer class="bg-uasu-darknavy text-slate-300 text-xs py-12 border-t-4 border-uasu-gold">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-                <!-- Col 1 -->
-                <div>
-                    <div class="flex items-center space-x-2 mb-3">
-                        <div class="w-8 h-8 rounded-full bg-uasu-gold text-uasu-navy font-black flex items-center justify-center text-sm shadow">
-                            U
-                        </div>
-                        <span class="font-bold text-white text-base">UASU Embu</span>
-                    </div>
-                    <p class="text-slate-400 text-xs leading-relaxed font-medium">
-                        Universities Academic Staff Union - University of Embu Chapter. Championing academic freedom, equity, and staff welfare.
-                    </p>
-                </div>
-
-                <!-- Col 2 -->
-                <div>
-                    <h5 class="font-bold text-white uppercase tracking-wider mb-3">Quick Links</h5>
-                    <ul class="space-y-2 font-semibold">
-                        <li><a href="#about" class="hover:text-uasu-gold transition">About Us & Values</a></li>
-                        <li><a href="#leadership" class="hover:text-uasu-gold transition">Executive Committee</a></li>
-                        <li><a href="#news" class="hover:text-uasu-gold transition">News & Announcements</a></li>
-                        <li><a href="#resources" class="hover:text-uasu-gold transition">CBA & Legal Documents</a></li>
-                    </ul>
-                </div>
-
-                <!-- Col 3 -->
-                <div>
-                    <h5 class="font-bold text-white uppercase tracking-wider mb-3">Member Tools</h5>
-                    <ul class="space-y-2 font-semibold">
-                        <li><a href="#calculator" onclick="switchPortalTab('calculator')" class="hover:text-uasu-gold transition">Salary Scale Estimator</a></li>
-                        <li><a href="#register" onclick="switchPortalTab('register')" class="hover:text-uasu-gold transition">Online Application Form</a></li>
-                        <li><a href="#grievance" onclick="switchPortalTab('grievance')" class="hover:text-uasu-gold transition">Grievance Desk</a></li>
-                        <li><a href="#events" class="hover:text-uasu-gold transition">Upcoming Meetings</a></li>
-                    </ul>
-                </div>
-
-                <!-- Col 4 -->
-                <div>
-                    <h5 class="font-bold text-white uppercase tracking-wider mb-3">Secretariat Location</h5>
-                    <p class="text-slate-400 mb-2 font-medium">University of Embu Campus<br>P.O. Box 6-60100, Embu</p>
-                    <p class="text-slate-400 mb-3 font-medium"><i class="fa-solid fa-phone text-uasu-gold mr-1"></i> +254 (0) 700 000 000</p>
-                    <div class="flex space-x-3 text-lg text-slate-400">
-                        <a href="#" class="hover:text-uasu-gold"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="#" class="hover:text-uasu-gold"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="#" class="hover:text-uasu-gold"><i class="fa-brands fa-linkedin"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center text-slate-400 text-[11px] gap-2">
-                <p>&copy; 2026 Universities Academic Staff Union (UASU) - University of Embu Chapter.</p>
-                <p>Designed for easy deployment on Render Static Web Service.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- News Article Modal -->
-    <div id="newsModal" class="fixed inset-0 bg-slate-900/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-        <div class="bg-white rounded-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 relative shadow-2xl border-2 border-sky-300">
-            <button onclick="closeModal('newsModal')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-2xl font-bold">
-                &times;
-            </button>
-            <div id="modalContent"></div>
-        </div>
-    </div>
-
-    <!-- Union Achievements Modal -->
-<div id="deployModal" class="fixed inset-0 bg-slate-900/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-    <div class="bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 relative shadow-2xl border-2 border-sky-300">
-        <button onclick="closeModal('deployModal')" class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 text-2xl font-bold">
-            &times;
-        </button>
-        
-        <div class="flex items-center space-x-3 mb-4">
-            <div class="p-3 bg-uasu-navy text-white rounded-xl shadow">
-                <i class="fa-solid fa-trophy text-2xl text-uasu-gold"></i>
-            </div>
-            <div>
-                <h3 class="text-xl font-bold text-uasu-navy">UASU Embu Chapter Achievements</h3>
-                <p class="text-xs text-slate-500 font-medium">Milestones & Wins for Our Members</p>
-            </div>
-        </div>
-
-        <div class="space-y-4 text-xs text-slate-700 leading-relaxed border-t border-slate-200 pt-4 font-medium">
-
-            <!-- Achievement 1 -->
-            <div class="p-4 bg-emerald-50 rounded-lg border border-emerald-200 flex items-start space-x-3">
-                <div class="p-2 bg-emerald-100 text-emerald-700 rounded-lg flex-shrink-0">
-                    <i class="fa-solid fa-hand-holding-heart text-lg"></i>
-                </div>
-                <div>
-                    <span class="font-bold text-uasu-navy block mb-1">1. Benevolence Fund Implementation</span>
-                    The Union implemented a strategy to put the Benevolence Fund into active use, providing timely financial assistance and support to members in times of need.
-                </div>
-            </div>
-
-            <!-- Achievement 2 -->
-            <div class="p-4 bg-sky-50 rounded-lg border border-sky-200 flex items-start space-x-3">
-                <div class="p-2 bg-sky-100 text-uasu-navy rounded-lg flex-shrink-0">
-                    <i class="fa-solid fa-bullhorn text-lg"></i>
-                </div>
-                <div>
-                    <span class="font-bold text-uasu-navy block mb-1">2. Continuous Member Communication</span>
-                    The Union continuously updates members on any ongoing activity, negotiations, and developments through verified official channels.
-                </div>
-            </div>
-
-            <!-- Achievement 3 - Placeholder for you to add -->
-            <div class="p-4 bg-amber-50 rounded-lg border border-amber-200 flex items-start space-x-3">
-                <div class="p-2 bg-amber-100 text-amber-800 rounded-lg flex-shrink-0">
-                    <i class="fa-solid fa-graduation-cap text-lg"></i>
-                </div>
-                <div>
-                    <span class="font-bold text-uasu-navy block mb-1">3. Your Next Achievement Here</span>
-                    Add your next achievement description here. Replace this text with the details of the milestone you want to highlight.
-                </div>
-            </div>
-
-            <!-- Achievement 4 - Placeholder for you to add -->
-            <div class="p-4 bg-purple-50 rounded-lg border border-purple-200 flex items-start space-x-3">
-                <div class="p-2 bg-purple-100 text-purple-700 rounded-lg flex-shrink-0">
-                    <i class="fa-solid fa-scale-balanced text-lg"></i>
-                </div>
-                <div>
-                    <span class="font-bold text-uasu-navy block mb-1">4. Your Next Achievement Here</span>
-                    Add your next achievement description here. Replace this text with the details of the milestone you want to highlight.
-                </div>
-            </div>
-
-            <!-- Achievement 5 - Placeholder for you to add -->
-            <div class="p-4 bg-rose-50 rounded-lg border border-rose-200 flex items-start space-x-3">
-                <div class="p-2 bg-rose-100 text-rose-700 rounded-lg flex-shrink-0">
-                    <i class="fa-solid fa-users-gear text-lg"></i>
-                </div>
-                <div>
-                    <span class="font-bold text-uasu-navy block mb-1">5. Your Next Achievement Here</span>
-                    Add your next achievement description here. Replace this text with the details of the milestone you want to highlight.
-                </div>
-            </div>
-
-            <!-- Achievement 6 - Placeholder for you to add -->
-            <div class="p-4 bg-indigo-50 rounded-lg border border-indigo-200 flex items-start space-x-3">
-                <div class="p-2 bg-indigo-100 text-indigo-700 rounded-lg flex-shrink-0">
-                    <i class="fa-solid fa-award text-lg"></i>
-                </div>
-                <div>
-                    <span class="font-bold text-uasu-navy block mb-1">6. Your Next Achievement Here</span>
-                    Add your next achievement description here. Replace this text with the details of the milestone you want to highlight.
-                </div>
-            </div>
-
-        </div>
-
-        <div class="mt-6 text-right">
-            <button onclick="closeModal('deployModal')" class="px-5 py-2 bg-uasu-navy text-white text-xs font-bold rounded-lg hover:bg-uasu-darknavy shadow">
-                Close
-            </button>
-        </div>
-    </div>
-</div>
-
-    <!-- JavaScript Event Handlers & Dynamic Functions -->
-    <script>
-        // Mobile Navigation Toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // ===== HERO SLIDER LOGIC =====
-        let currentSlide = 0;
-        let slideInterval;
-        const slides = document.querySelectorAll('#heroSlider .slide');
-        const dots = document.querySelectorAll('#sliderDots .slider-dot');
-        const totalSlides = slides.length;
-
-        function showSlide(index) {
-            // Remove active from all slides and dots
-            slides.forEach(slide => slide.classList.remove('active'));
-            dots.forEach(dot => dot.classList.remove('active'));
-
-            // Wrap around
-            if (index >= totalSlides) index = 0;
-            if (index < 0) index = totalSlides - 1;
-
-            currentSlide = index;
-
-            // Add active to current slide and dot
-            slides[currentSlide].classList.add('active');
-            if (dots[currentSlide]) dots[currentSlide].classList.add('active');
-        }
-
-        function changeSlide(direction) {
-            showSlide(currentSlide + direction);
-            resetAutoSlide();
-        }
-
-        function goToSlide(index) {
-            showSlide(index);
-            resetAutoSlide();
-        }
-
-        function autoSlide() {
-            showSlide(currentSlide + 1);
-        }
-
-        function resetAutoSlide() {
-            clearInterval(slideInterval);
-            slideInterval = setInterval(autoSlide, 5000); // Change every 5 seconds
-        }
-
-        // Initialize auto-slide
-        resetAutoSlide();
-
-        // Pause on hover
-        const heroSlider = document.getElementById('heroSlider');
-        if (heroSlider) {
-            heroSlider.addEventListener('mouseenter', () => clearInterval(slideInterval));
-            heroSlider.addEventListener('mouseleave', resetAutoSlide);
-        }
-
-        // News Filter Functions
-        function filterNews(category) {
-            const cards = document.querySelectorAll('.news-card');
-            const buttons = document.querySelectorAll('#newsFilters button');
-
-            buttons.forEach(btn => {
-                btn.classList.remove('bg-uasu-navy', 'text-white', 'shadow');
-                btn.classList.add('bg-white', 'text-uasu-navy');
-            });
-
-            event.target.classList.remove('bg-white', 'text-uasu-navy');
-            event.target.classList.add('bg-uasu-navy', 'text-white', 'shadow');
-
-            cards.forEach(card => {
-                if (category === 'all' || card.dataset.category === category) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-
-        // Tab Switching for Member Portal
-        function switchPortalTab(tabName) {
-            const tabs = document.querySelectorAll('.portal-tab-content');
-            const buttons = document.querySelectorAll('.portal-tab-btn');
-
-            tabs.forEach(tab => tab.classList.add('hidden'));
-
-            buttons.forEach(btn => {
-                btn.classList.remove('border-uasu-navy', 'bg-white', 'shadow');
-                btn.classList.add('border-transparent');
-            });
-
-            document.getElementById(tabName).classList.remove('hidden');
-
-            if (tabName === 'calculator') {
-                document.getElementById('tabCalcBtn').classList.add('border-uasu-navy', 'bg-white', 'shadow');
-            } else if (tabName === 'register') {
-                document.getElementById('tabRegBtn').classList.add('border-uasu-navy', 'bg-white', 'shadow');
-            } else if (tabName === 'grievance') {
-                document.getElementById('tabGrievanceBtn').classList.add('border-uasu-navy', 'bg-white', 'shadow');
-            }
-        }
-
-        // CBA Pay Calculator Logic
-        const payScales = {
-            lecturer: {
-                1: { basic: 110550, house: 55300 },
-                2: { basic: 125400, house: 55300 },
-                3: { basic: 160200, house: 55300 }
-            },
-            seniorLecturer: {
-                1: { basic: 144450, house: 61000 },
-                2: { basic: 168200, house: 61000 },
-                3: { basic: 206000, house: 61000 }
-            },
-            assocProf: {
-                1: { basic: 180000, house: 66000 },
-                2: { basic: 215000, house: 66000 },
-                3: { basic: 260000, house: 66000 }
-            },
-            professor: {
-                1: { basic: 209000, house: 73000 },
-                2: { basic: 255000, house: 73000 },
-                3: { basic: 320000, house: 73000 }
-            }
-        };
-
-        function calculateSalary() {
-            const cadre = document.getElementById('cadreSelect').value;
-            const notch = document.getElementById('notchSelect').value;
-
-            const scale = payScales[cadre][notch];
-            const basic = scale.basic;
-            const house = scale.house;
-            const dues = basic * 0.01;
-            const gross = basic + house;
-
-            document.getElementById('basicSalaryResult').innerText = `KES ${basic.toLocaleString('en-KE', {minimumFractionDigits: 2})}`;
-            document.getElementById('houseAllowanceResult').innerText = `KES ${house.toLocaleString('en-KE', {minimumFractionDigits: 2})}`;
-            document.getElementById('unionDuesResult').innerText = `- KES ${dues.toLocaleString('en-KE', {minimumFractionDigits: 2})}`;
-            document.getElementById('grossTotalResult').innerText = `KES ${gross.toLocaleString('en-KE', {minimumFractionDigits: 2})}`;
-        }
-
-        // Form Handlers
-        function handleRegistration(e) {
-            e.preventDefault();
-            const memberId = 'UASU-UOEM-' + Math.floor(1000 + Math.random() * 9000);
-            alert(`Application Received!\n\nYour Member Registration Reference Code is: ${memberId}\n\nA copy of check-off instructions has been dispatched.`);
-            document.getElementById('membershipForm').reset();
-        }
-
-        function handleGrievanceSubmit(e) {
-            e.preventDefault();
-            const trackCode = 'GRV-' + Math.floor(100000 + Math.random() * 900000);
-            alert(`Confidential Grievance Submitted Successfully.\n\nTracking Code: ${trackCode}\n\nThe Chapter Executive Secretary will review your filing in confidence.`);
-            document.getElementById('grievanceForm').reset();
-        }
-
-        function handleContactSubmit(e) {
-            e.preventDefault();
-            alert("Thank you for contacting the UASU Embu Chapter Secretariat.");
-            e.target.reset();
-        }
-
-        function simulateDownload(filename) {
-            alert(`Initiating download for: ${filename}`);
-        }
-
-        function simulateRSVP(eventName) {
-            alert(`RSVP Confirmed for: ${eventName}`);
-        }
-
-        function toggleFaq(button) {
-            const answer = button.nextElementSibling;
-            const icon = button.querySelector('i');
-            answer.classList.toggle('hidden');
-            icon.classList.toggle('rotate-180');
-        }
-
-        function openModal(modalId) {
-            document.getElementById(modalId).classList.remove('hidden');
-        }
-
-        function closeModal(modalId) {
-            document.getElementById(modalId).classList.add('hidden');
-        }
-
-        function openNewsModal(articleId) {
-            const modal = document.getElementById('newsModal');
-            const content = document.getElementById('modalContent');
-
-            if (articleId === 'cba-update') {
-                content.innerHTML = `
-                    <span class="bg-sky-100 text-uasu-navy text-xs px-2.5 py-0.5 rounded-md font-bold border border-sky-300">CBAs & Salaries</span>
-                    <h3 class="text-xl font-bold text-uasu-navy mt-2 mb-3">Implementation Progress on 2021-2025 National CBA Basic Salary Arrears</h3>
-                    <p class="text-xs text-slate-500 mb-4">Published on October 1, 2026 • By Secretariat</p>
-                    <div class="text-xs text-slate-700 space-y-3 leading-relaxed font-medium">
-                        <p>Following continuous engagement between the National Executive Council (NEC), Inter-Public Universities Councils Consultative Forum (IPUCCF), and Ministry officials, the chapter updates members on arrears disbursement.</p>
-                        <p>The University of Embu management has confirmed receipt of adjusted capitation schedules. Computation for individual staff arrears across Grade 12 to Grade 15 is complete.</p>
-                        <p>Members are advised to review their payslips. Any discrepancy should be reported to the Treasurer via the online Member Portal.</p>
-                    </div>
-                `;
-            } else if (articleId === 'medical-scheme') {
-                content.innerHTML = `
-                    <span class="bg-emerald-100 text-emerald-900 text-xs px-2.5 py-0.5 rounded-md font-bold border border-emerald-300">Welfare</span>
-                    <h3 class="text-xl font-bold text-uasu-navy mt-2 mb-3">Enhanced Inpatient & Outpatient Medical Scheme Coverage Terms 2026/2027</h3>
-                    <p class="text-xs text-slate-500 mb-4">Published on September 24, 2026 • By Welfare Desk</p>
-                    <div class="text-xs text-slate-700 space-y-3 leading-relaxed font-medium">
-                        <p>The Chapter Welfare Committee is pleased to inform members that negotiations for enhanced medical cover options have been finalized.</p>
-                        <p>Key highlights include expanded optical limits, higher chronic ailment management benefits, and inclusion of leading regional hospitals in Embu, Nyeri, and Nairobi.</p>
-                    </div>
-                `;
-            } else if (articleId === 'agm-resolution') {
-                content.innerHTML = `
-                    <span class="bg-amber-100 text-amber-900 text-xs px-2.5 py-0.5 rounded-md font-bold border border-amber-300">Industrial Action</span>
-                    <h3 class="text-xl font-bold text-uasu-navy mt-2 mb-3">Special General Meeting (SGM) Resolution Notice Regarding Workloads</h3>
-                    <p class="text-xs text-slate-500 mb-4">Published on September 15, 2026 • By Executive Desk</p>
-                    <div class="text-xs text-slate-700 space-y-3 leading-relaxed font-medium">
-                        <p>In accordance with resolutions passed during the last SGM, the chapter maintains a firm stance on teaching workload caps per academic semester.</p>
-                        <p>Any teaching load exceeding statutory hours specified under university statutes must be pre-approved with written commitment for overload compensation.</p>
-                    </div>
-                `;
-            }
-
-            modal.classList.remove('hidden');
-        }
-    </script>
-</body>
-</html>
+                     <!-- Leader 7 -->
+                    <div class="bg-white rounded-2xl shadow-md border-2 border-sky-300 overflow
